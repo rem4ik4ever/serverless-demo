@@ -9,11 +9,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && netlify-lambda install functions/* && netlify-lambda build functions/*",
+    "build": "react-scripts build && netlify-lambda build functions/* --config webpack.functions.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start:lambda": "netlify-lambda serve functions/*",
-    "build:lambda": "netlify-lambda build functions/*"
+    "build:lambda": "netlify-lambda build functions/* --config webpack.functions.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +31,7 @@
     ]
   },
   "devDependencies": {
-    "netlify-lambda": "^1.6.3"
+    "netlify-lambda": "^1.6.3",
+    "webpack-node-externals": "^1.7.2"
   }
 }
