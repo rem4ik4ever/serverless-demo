@@ -11,7 +11,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:fns": "netlify-lambda build functions-src/*"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +30,7 @@
     ]
   },
   "devDependencies": {
+    "netlify-lambda": "^1.6.3",
     "webpack-node-externals": "^1.7.2"
   }
 }
