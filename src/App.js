@@ -4,6 +4,7 @@ import "./App.css";
 import ApolloClient from "apollo-boost";
 import { gql } from "apollo-boost";
 import { ApolloProvider, useQuery } from "@apollo/react-hooks";
+import Main from "./components/main";
 
 const client = new ApolloClient({
   uri: "/.netlify/functions/apollo-graphql"
@@ -39,24 +40,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://remkim.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hello Rem
-          </a>
-          <HelloButton />
-          <HelloComponent />
-        </header>
+        <Main />
       </div>
-      //{" "}
     </ApolloProvider>
   );
 }
